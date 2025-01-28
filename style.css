@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100vh;
+    background-color: #edf2ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bodyContainerAll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.spaceSection {
+    width: 100%;
+    height: 130px;
+}
+
+/*header*/
+header {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(100, 115, 255);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+}
+
+.headerContainer {
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+
+.headerLeft {
+    width: 20%;
+    height: 100%;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 200%;
+    cursor: pointer;
+}
+
+.headerCenter {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerCenter nav {
+    display: flex;
+    gap: 20px;
+}
+
+.headerCenter nav a {
+    text-decoration: none;
+}
+
+.headerCenter nav h6 {
+    color: #fff;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-decoration: none;
+    font-family: "noto sans";
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.heaedrRight {
+    width: 20%;
+}
+
+.headerBtn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#headerBtn {
+    width: 80%;
+    height: 50%;
+    border: none;
+    background: linear-gradient(to right, #ffbd59, #ff9900);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.2s ease-in;
+}
+
+#headerBtn:hover {
+    transform: scale(1.02);
+}
+
+#headerBtn h6 {
+    font-size: 17px;
+    color: #fff;
+}
+
+#spanCircleHeader {
+    display: block;
+    border-radius: 100%;
+    border: 10px solid #ffbd59;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 670px;
+    top: 70px;
+    opacity: 0.2;
+    z-index: 2;
+}
+
+#spanCircleHeader2 {
+    display: block;
+    border-radius: 100%;
+    border: 17px solid #ffbd59;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 37%;
+    top: -250px;
+    opacity: 0.2;
+    z-index: 2;
+}
+
+/*bodyContainer*/
+.bodyContainer {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    top: 120px;
+}
+
+.TopBlogDiv {
+    width: 100%;
+}
+
+.TitleDiv {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TitleDiv h1 {
+    font-size: 90px;
+    font-family: "ubuntu";
+    text-align: center;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.TitleDiv span {
+    color: #ffbd59;
+}
+
+.subTitleDiv {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.subTitleDiv h6 {
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-family: "roboto";
+    color: #757575;
+}
+
+.inputSearchDiv {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#inputSearchBlog {
+    display: flex;
+    width: 50%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 50px;
+    padding-right: 70px;
+    font-size: 17px;
+    box-shadow: 0px 0px 50px 1px #d7d8ff;
+
+
+    background-image: url("/search.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 10px center;
+}
+
+#submitSearch {
+    position: absolute;
+    right: calc(21% + 12px); /* Positionne à droite de l'input */
+    bottom: 4px; /* Ajuste verticalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffbd59;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+
+    background-image: url("/right-arrow.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+#submitSearch:hover {
+    width: 50px;
+    background-position: 14px center;
+}
+
+/*blogContainer*/
+.blogContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.blogNewsInfosSection {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    position: sticky; /* Rend la section "collante" */
+    top: 145px; /* Se bloque à 20px du haut de l'écran */
+    height: fit-content;
+}
+
+.blogNewsDiv,
+.blogInfosDiv {
+    width: 80%;
+    height: 270px;
+    border-radius: 5px;
+}
+
+.blogNewsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 7px 2px rgb(225, 225, 225);
+    background-color: #fff;
+}
+
+.blogNewsTitle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    height: 20%;
+}
+
+.blogNewsTitle h1 {
+    font-family: "noto sans";
+    color: #ffbd59;
+}
+
+.blogNewsList {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+}
+
+.blogNewRow {
+    width: 100%;
+    height: calc(100%/3);
+    display: flex;
+}
+
+.blogNewRowLeft {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#blogNew0 {
+    background-color: #ffbd59;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+#blogNew1 {
+    background-color: rgb(111, 55, 255);
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+#blogNew2 {
+    background-color: rgb(48, 55, 255);
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.blogNewRowRight {
+    width: 90%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.blogNewP {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.blogNewP:hover p {
+    color: rgb(100, 115, 255);
+    font-weight: 500;
+}
+
+.blogNewP p {
+    font-family: "roboto";
+    color: #757575;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.blogInfosDiv {
+    background-image: url("/img0.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.blogInfosDiv:hover {
+    transform: scale(1.02);
+}
+
+.blogCardsSection {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.blogCard {
+    width: 40%;
+    height: 400px;
+    box-shadow: 0px 2px 7px 2px rgb(225, 225, 225);
+    border-radius: 5px;
+    background-color: #fff;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+.blogCard:hover {
+    transform: scale(1.02);
+}
+
+.bannerArticle {
+    width: 100%;
+    height: 35%;
+}
+
+.bannerArticle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.blogArticleTheme {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h6Freelance {
+    color: #ffbd59;
+    font-family: "noto sans";
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.h6Strategy {
+    color: rgb(72, 0, 255);
+    font-family: "noto sans";
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.h6Scaling {
+    color: rgb(48, 55, 255);
+    font-family: "noto sans";
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.blogArticleTitle {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogArticleTitle h1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-family: "ubuntu";
+    font-weight: 500;
+    color: rgb(100, 115, 255);
+}
+
+.blogArticleBy {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogArticleBy h6 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: "noto sans";
+    color: #757575;
+}
+
+/*footer*/
+
+.footerContainer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 80%;
+    height: 90%;
+}
+
+.topFooter {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topFooter img {
+    width: 35%;
+}
+
+.bottomFooter {
+    width: 100%;
+    height: 20%;
+    border-top: 2px solid #cacaca;
+    display: flex;
+    justify-content: center;
+}
+
+.bottomFooter h6 {
+    font-family: "noto sans";
+    font-size: 17px;
+    color: rgb(100, 115, 255);
+    text-decoration: none;
+}
+
+.bottomFooter a {
+    text-decoration: none;
+    color: rgb(100, 115, 255);
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .spaceSection {
+        width: 100%;
+        height: 100px;
+    }
+
+    /* Ajuste le header */
+    header {
+        height: 80px;
+    }
+
+    .headerContainer {
+        width: 90%;
+    }
+
+    .headerLeft {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 170%;
+    }
+
+    .headerCenter {
+        display: none;
+    }
+
+    .heaedrRight {
+        width: 50%;
+    }
+
+    .headerCenter nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .headerCenter nav h6 {
+        font-size: 16px;
+        padding: 0;
+    }
+
+    #headerBtn {
+        width: 70%;
+        height: 40px;
+    }
+
+    #headerBtn h6 {
+        font-size: 13px;
+    }
+
+    /* Corps principal */
+    .bodyContainer {
+        width: 90%;
+        top: auto;
+    }
+
+    .TitleDiv h1 {
+        font-size: 40px;
+    }
+
+    .subTitleDiv h6 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #inputSearchBlog {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    #submitSearch {
+        right: 5%; /* Réajuste pour le bouton de recherche */
+    }
+
+    /* Section des blogs */
+    .blogContainer {
+        flex-direction: column;
+    }
+
+    .blogNewsInfosSection {
+        width: 100%;
+        position: static; /* Supprime la "stickiness" */
+    }
+
+    .blogCardsSection {
+        width: 100%;
+    }
+
+    .blogCard {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .blogArticleTitle h1 {
+        font-size: 18px;
+    }
+
+    /* Footer */
+    .footerContainer {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .topFooter img {
+        width: 80%;
+    }
+
+    .bottomFooter h6 {
+        font-size: 14px;
+    }
+
+    #submitSearch {
+        position: absolute;
+        right: calc(0% + 5px); /* Positionne à droite de l'input */
+        bottom: 4px; /* Ajuste verticalement */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 42px;
+        height: 42px;
+        border: none;
+        border-radius: 5px;
+        background-color: #ffbd59;
+        cursor: pointer;
+        transition: 0.2s ease-in;
+    
+        background-image: url("/right-arrow.png");
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+    }
+    
+    .blogContainer {
+        gap: 35px;
+    }
+
+    .blogNewsInfosSection {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+
+        position: static;
+        top: unset;
+    }
+
+    .blogNewsTitle h1 {
+        font-size: 20px;
+        font-family: "noto sans";
+        color: #ffbd59;
+    }
+}
